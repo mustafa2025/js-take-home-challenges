@@ -25,32 +25,145 @@
 // Write a switch statement using the day of your birthday variable that will cover all cases from Monday thru Friday, console log the day of the week in a string
 // Commit your code to github
 
-const birthday = new Date('August 21, 1975 23:15:30');
-const dayOfWeek = birthday.getDay() 
-console.log(dayOfWeek);
-console.log(birthday)
-switch (dayOfWeek) {
-    case 0:
-        console.log("Sunday")
-        break;
-    case 1:
-        console.log("Monday")
-        break;
-    case 2: 
-        console.log("Tuesday")
-        break;
-    case 3:
-        console.log("Wednesday")
-        break;
-    case 4:
-        console.log("Thursday")
-        break;
-    case 5:
-        console.log ("Friday")
-        break;
-    case 6:
-        console.log ("Saturday")
-    default:
-        console.log ("Error: Day of the week is not valid")
-}
+// const birthday = new Date('August 21, 1975 23:15:30');
+// const dayOfWeek = birthday.getDay() 
+// console.log(dayOfWeek);
+// console.log(birthday)
+// switch (dayOfWeek) {
+//     case 0:
+//         console.log("Sunday")
+//         break;
+//     case 1:
+//         console.log("Monday")
+//         break;
+//     case 2: 
+//         console.log("Tuesday")
+//         break;
+//     case 3:
+//         console.log("Wednesday")
+//         break;
+//     case 4:
+//         console.log("Thursday")
+//         break;
+//     case 5:
+//         console.log ("Friday")
+//         break;
+//     case 6:
+//         console.log ("Saturday")
+//     default:
+//         console.log ("Error: Day of the week is not valid")
+// }
+// Challenge 1:
+// Create a prompt and ask user for first favorite color
+// Create a prompt and ask user for second favorite color
+// Use a ternary operator to print out "you chose my favorite colors" if user selected blue for first favorite color AND grey for second favorite color or else print "better luck next time"
 
+// const firstFavColor = prompt ("What is your fav color?")
+// const secondFavColor = prompt ("whats your second fav color?")
+// const answer = firstFavColor === "blue" && secondFavColor === "grey" ? "You chose my fav colors" : "better luck next time";
+// console.log("🚀 ~ file: script.js ~ line 64 ~ answer", answer)
+
+// Write a arrow function that accepts a password (string)
+// Validate the password using the following rules:
+// Must be 6-20 characters long
+// Must start with a letter
+// Alert the user if their password has been accepted or why their password was rejected
+
+// const validatePassword =(str)=>{
+// const lengthofstr = str.length
+// const onlyLetters = /^[a-zA-Z]+$/;
+// if (lengthofstr >=6 && lengthofstr <=20) {
+//     if (onlyLetters.test(str.charAt(0))) {
+//     console.log (`password has been accepted`) 
+// }
+// else {
+//     console.log (`password rejected, must start with a letter`)
+// }}
+// else {
+//     console.log (`password was rejected`)
+// }
+
+// console.log("🚀 ~ file: script.js ~ line 74 ~ validatePassword ~ lengthofstr", lengthofstr)
+
+// }
+// console.log("🚀 ~ file: script.js ~ line 76 ~ validatePassword ~ validatePassword", validatePassword("sadsfdsafafdsaffsy"))
+
+// Bonus:
+// Your task is to create a function that does four basic mathematical operations.
+// The function should take three arguments - operation(string/char), value1(number), value2(number).
+// The function should return result of numbers after applying the chosen operation.
+// Examples(Operator, value1, value2) --> output
+// ('+', 4, 7) --> 11
+// ('-', 15, 18) --> -3
+// ('*', 5, 5) --> 25
+// ('/', 49, 7) --> 7
+
+// const calculations = (operation, value1, value2)=> {
+// if ('+' === operation ){
+//     return value1 + value2 
+// }
+// else if ('-' === operation) {
+//     return value1 - value2
+// }
+// else if ('*' === operation) {
+//     return value1 * value2 
+// }
+// else if ('/' === operation) {
+//     return value1 / value2 
+// }
+// else (console.log ("invalid operation"))
+// }
+// calculations('+', 10, 10)
+// console.log("🚀 ~ file: script.js ~ line 117 ~ calculations('+', 6, 10)", calculations('/', 15, 5))
+
+// Read the Pokemon API
+// Create an async function that:
+// Makes a request to the Pokemon API using fetch. Fetch a specific Pokemon other than Ditto
+// Stores this request into a variable
+// Makes sure we use .json()
+// Display the name of the Pokemon that you chose in an alert
+
+// const getPokemon = async (pokemonName) => {
+//     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+//     const data = await response.json() 
+//     console.log("🚀 ~ file: script.js ~ line 128 ~ getPokemon ~ response", data)
+ 
+// }
+//     console.log(getPokemon(`Ditto`));
+
+
+// const printHelloWorld = (firstName, lastName) => {
+// const hey = `Hello World ${firstName} ${lastName}`
+// if (firstName === `Mustafa`) {
+// console.log(hey);
+// } else {
+//     console.log("Try again");
+// }
+// }
+// console.log(printHelloWorld(`Mustafa`, `Ahmed`));
+
+
+// Read the Pokemon API
+// Create an async function that:
+// Makes a request to the Pokemon API using fetch. Fetch a specific Pokemon other than Ditto
+// Stores this request into a variable
+// Makes sure we use .json()
+// Display the name of the Pokemon that you chose in an alert
+
+const getPokemon = async (pokemonName) => {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+    const data = await response.json() 
+    console.log("🚀 ~ file: script.js ~ line 128 ~ getPokemon ~ response", data)
+
+    const nameOfPokemon = document.createElement("h1")
+    nameOfPokemon.innerHTML = data.name
+    const image = document.createElement("img")
+    image.src = "https://picsum.photos/id/1025/600/400"
+}
+//     console.log(getPokemon(`Ditto`));
+
+const para = document.createElement("button");
+para.innerHTML="Test";
+console.log(para);
+document.body.appendChild(para)
+document.getElementById("test").addEventListener("click", getPokemon (`Ditto`) )
