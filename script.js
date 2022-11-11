@@ -159,11 +159,14 @@ const getPokemon = async (pokemonName) => {
     nameOfPokemon.innerHTML = data.name
     const image = document.createElement("img")
     image.src = "https://picsum.photos/id/1025/600/400"
+    document.body.appendChild(nameOfPokemon)
+    document.body.appendChild(image)
 }
 //     console.log(getPokemon(`Ditto`));
 
 const para = document.createElement("button");
 para.innerHTML="Test";
+para.id="test"
 console.log(para);
 document.body.appendChild(para)
-document.getElementById("test").addEventListener("click", getPokemon (`Ditto`) )
+document.getElementById("Test").addEventListener("click", ()=>getPokemon(`ditto`) )
