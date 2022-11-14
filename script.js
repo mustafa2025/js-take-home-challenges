@@ -150,23 +150,54 @@
 // Makes sure we use .json()
 // Display the name of the Pokemon that you chose in an alert
 
-const getPokemon = async (pokemonName) => {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
-    const data = await response.json() 
-    console.log("🚀 ~ file: script.js ~ line 128 ~ getPokemon ~ response", data)
+// const getPokemon = async (pokemonName) => {
+//     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+//     const data = await response.json() 
+//     console.log("🚀 ~ file: script.js ~ line 128 ~ getPokemon ~ response", data)
 
-    const nameOfPokemon = document.createElement("h1")
-    nameOfPokemon.innerHTML = data.name
-    const image = document.createElement("img")
-    image.src = "https://picsum.photos/id/1025/600/400"
-    document.body.appendChild(nameOfPokemon)
-    document.body.appendChild(image)
+//     const nameOfPokemon = document.createElement("h1")
+//     nameOfPokemon.innerHTML = data.name
+//     const image = document.createElement("img")
+//     image.src = "https://picsum.photos/id/1025/600/400"
+//     document.body.appendChild(nameOfPokemon)
+//     document.body.appendChild(image)
+// }
+// //     console.log(getPokemon(`Ditto`));
+
+// const para = document.createElement("button");
+// para.innerHTML="Test";
+// para.id="test"
+// console.log(para);
+// document.body.appendChild(para)
+// document.getElementById("Test").addEventListener("click", ()=>getPokemon(`ditto`) )
+
+// Let's say you're a car manufacturer and need to create many cars to build your inventory
+// Create a class called "car"
+// Add some properties like "make", "model", "year", "color", etc
+// Use your car class to construct 4 (or more) different cars
+// console log your code so you can see the results!
+// BONUS: Display the details for each of your cars in your HTML
+
+let Car = class {
+    constructor (make, model, year, color) {
+        this.make = make
+        this.model = model
+        this.year = year
+        this.color = color
+    }
 }
-//     console.log(getPokemon(`Ditto`));
+const vicsCar = new Car("honda", "civic", "2004", "black")
+console.log(vicsCar.make);
+const mustafaCar = new Car("toyota", "camry", "2009", "white")
+console.log(mustafaCar.model)
+console.log(mustafaCar)
+const vicsCarMake = document.createElement("h1")
+vicsCarMake.innerHTML = vicsCar.make
+ const vicsCarModel = document.createElement("p")
+vicsCarModel.innerHTML = vicsCar.model
+const vicsCarYear = document.createElement("p")
+vicsCarYear.innerHTML = vicsCar.year
+document.body.appendChild(vicsCarMake)
+document.body.appendChild(vicsCarModel)
+document.body.appendChild(vicsCarYear)
 
-const para = document.createElement("button");
-para.innerHTML="Test";
-para.id="test"
-console.log(para);
-document.body.appendChild(para)
-document.getElementById("Test").addEventListener("click", ()=>getPokemon(`ditto`) )
