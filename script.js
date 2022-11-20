@@ -3,7 +3,7 @@
 // alert (todayDate)
 // const numberOne = prompt ("Enter a number")
 // const numberTwo = prompt ("Enter another number")
-// console.log("Math.min(numberOne, numberTwo) : ",+Math.min(numberOne, numberTwo)) 
+// console.log("Math.min(numberOne, numberTwo) : ",+Math.min(numberOne, numberTwo))
 // alert (Math.min(numberOne, numberTwo))
 
 // day3
@@ -17,8 +17,7 @@
 // const secondFavColor = prompt ("Enter Second Fav Color")
 // const color = firstFavColor === "blue" && secondFavColor === "grey" ? `you chose my favorite colors`: `better luck next time`
 
-
-// day 3 
+// day 3
 // challenge 2
 // Declare a variable called birthday that looks like this: const birthday = new Date('August 19, 1975 23:15:30');
 // Use the getDay() method to create a variable that keeps track of the day of your birthday
@@ -26,7 +25,7 @@
 // Commit your code to github
 
 // const birthday = new Date('August 21, 1975 23:15:30');
-// const dayOfWeek = birthday.getDay() 
+// const dayOfWeek = birthday.getDay()
 // console.log(dayOfWeek);
 // console.log(birthday)
 // switch (dayOfWeek) {
@@ -36,7 +35,7 @@
 //     case 1:
 //         console.log("Monday")
 //         break;
-//     case 2: 
+//     case 2:
 //         console.log("Tuesday")
 //         break;
 //     case 3:
@@ -74,7 +73,7 @@
 // const onlyLetters = /^[a-zA-Z]+$/;
 // if (lengthofstr >=6 && lengthofstr <=20) {
 //     if (onlyLetters.test(str.charAt(0))) {
-//     console.log (`password has been accepted`) 
+//     console.log (`password has been accepted`)
 // }
 // else {
 //     console.log (`password rejected, must start with a letter`)
@@ -100,16 +99,16 @@
 
 // const calculations = (operation, value1, value2)=> {
 // if ('+' === operation ){
-//     return value1 + value2 
+//     return value1 + value2
 // }
 // else if ('-' === operation) {
 //     return value1 - value2
 // }
 // else if ('*' === operation) {
-//     return value1 * value2 
+//     return value1 * value2
 // }
 // else if ('/' === operation) {
-//     return value1 / value2 
+//     return value1 / value2
 // }
 // else (console.log ("invalid operation"))
 // }
@@ -125,12 +124,11 @@
 
 // const getPokemon = async (pokemonName) => {
 //     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
-//     const data = await response.json() 
+//     const data = await response.json()
 //     console.log("🚀 ~ file: script.js ~ line 128 ~ getPokemon ~ response", data)
- 
+
 // }
 //     console.log(getPokemon(`Ditto`));
-
 
 // const printHelloWorld = (firstName, lastName) => {
 // const hey = `Hello World ${firstName} ${lastName}`
@@ -142,7 +140,6 @@
 // }
 // console.log(printHelloWorld(`Mustafa`, `Ahmed`));
 
-
 // Read the Pokemon API
 // Create an async function that:
 // Makes a request to the Pokemon API using fetch. Fetch a specific Pokemon other than Ditto
@@ -152,7 +149,7 @@
 
 // const getPokemon = async (pokemonName) => {
 //     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
-//     const data = await response.json() 
+//     const data = await response.json()
 //     console.log("🚀 ~ file: script.js ~ line 128 ~ getPokemon ~ response", data)
 
 //     const nameOfPokemon = document.createElement("h1")
@@ -178,26 +175,49 @@
 // console log your code so you can see the results!
 // BONUS: Display the details for each of your cars in your HTML
 
-let Car = class {
-    constructor (make, model, year, color) {
-        this.make = make
-        this.model = model
-        this.year = year
-        this.color = color
-    }
-}
-const vicsCar = new Car("honda", "civic", "2004", "black")
-console.log(vicsCar.make);
-const mustafaCar = new Car("toyota", "camry", "2009", "white")
-console.log(mustafaCar.model)
-console.log(mustafaCar)
-const vicsCarMake = document.createElement("h1")
-vicsCarMake.innerHTML = vicsCar.make
- const vicsCarModel = document.createElement("p")
-vicsCarModel.innerHTML = vicsCar.model
-const vicsCarYear = document.createElement("p")
-vicsCarYear.innerHTML = vicsCar.year
-document.body.appendChild(vicsCarMake)
-document.body.appendChild(vicsCarModel)
-document.body.appendChild(vicsCarYear)
+// let Car = class {
+//     constructor (make, model, year, color) {
+//         this.make = make
+//         this.model = model
+//         this.year = year
+//         this.color = color
+//     }
+// }
+// const vicsCar = new Car("honda", "civic", "2004", "black")
+// console.log(vicsCar.make);
+// const mustafaCar = new Car("toyota", "camry", "2009", "white")
+// console.log(mustafaCar.model)
+// console.log(mustafaCar)
+// const vicsCarMake = document.createElement("h1")
+// vicsCarMake.innerHTML = vicsCar.make
+//  const vicsCarModel = document.createElement("p")
+// vicsCarModel.innerHTML = vicsCar.model
+// const vicsCarYear = document.createElement("p")
+// vicsCarYear.innerHTML = vicsCar.year
+// document.body.appendChild(vicsCarMake)
+// document.body.appendChild(vicsCarModel)
+// document.body.appendChild(vicsCarYear)
 
+// Write a JS function to check whether in input is in an array or not
+// Write a JS function to clone an array
+// Write a simple JavaScript program to join all elements of the following array into a string.
+// const myColor = ["Red", "Green", "White", "Black"];
+//   Sample Output : -4,-3,1,2,3,5,6,7,8.
+// const arr = [3, 8, 7, 6, 5, -4, 3, 2, 1];
+// Write a JS function to compute the sum and product of an array of integers. */
+const array = [1, 2, 3];
+const isInAnArray = (input) => {
+  return array.includes(input);
+};
+console.log(isInAnArray(3));
+
+const myColor1 = ["Red", 76, ["this", "that"], "Black"];
+
+const myColor = (colors) => {
+  return colors.join("");
+};
+console.log(myColor(myColor1));
+
+const arr = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
+arr.sort();
+console.log(arr);
