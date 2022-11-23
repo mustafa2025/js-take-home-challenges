@@ -205,19 +205,89 @@
 //   Sample Output : -4,-3,1,2,3,5,6,7,8.
 // const arr = [3, 8, 7, 6, 5, -4, 3, 2, 1];
 // Write a JS function to compute the sum and product of an array of integers. */
-const array = [1, 2, 3];
-const isInAnArray = (input) => {
-  return array.includes(input);
-};
-console.log(isInAnArray(3));
+//
+// const array = [1, 2, 3];
+// const isInAnArray = (input) => {
+//   return array.includes(input);
+// };
+// console.log(isInAnArray(3));
 
-const myColor1 = ["Red", 76, ["this", "that"], "Black"];
+// const myColor1 = ["Red", 76, ["this", "that"], "Black"];
 
-const myColor = (colors) => {
-  return colors.join("");
-};
-console.log(myColor(myColor1));
+// const myColor = (colors) => {
+//   return colors.join("");
+// };
+// console.log(myColor(myColor1));
 
-const arr = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
-arr.sort();
-console.log(arr);
+// const arr = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
+// arr.sort();
+// console.log(arr);
+
+// Object Exercises
+
+// Create an object with 3 key value pairs. Then delete one of the items from the object. Console log before and after deleting
+// // Write a function that will log the reading status of each book from the array of objects. Here is the array
+// // let library = [ { { author: 'Bill Gates', title: 'The Road Ahead', readingStatus: true }, { author: 'Steve Jobs', title: 'Walter Isaacson', readingStatus: true }, { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', readingStatus: false }];}
+// // Create a function that multiplies every value by two const myObject = { 'a': 1, 'b': 2, 'c': 3 }; should turn into const myObject = { 'a': 2, 'b': 4, 'c': 36};
+
+// const life = { name: "Mustafa", height: "6'3", age: "32" };
+// console.log(life);
+// delete life.height;
+// console.log(life);
+
+// const library = [
+//   { author: "Bill Gates", title: "The Road Ahead", readingStatus: true },
+//   { author: "Steve Jobs", title: "Walter Isaacson", readingStatus: true },
+//   {
+//     author: "Suzanne Collins",
+//     title: "Mockingjay: The Final Book of The Hunger Games",
+//     readingStatus: false,
+//   },
+// ];
+// const readingStatus = (books) => {
+//   return books.map((book) => {
+//     console.log(
+//       `${book.readingStatus ? "I read " : "I Still need to read"} ${book.title}`
+//     );
+//   });
+// };
+// readingStatus(library);
+
+// const myObject = { a: 1, b: 2, c: 3 };
+
+// const multiplyByTwo = (numbersObject) => {
+//   for (const key in numbersObject) {
+//     numbersObject[key] = numbersObject[key] * 2;
+//   }
+//   return numbersObject;
+// };
+
+// console.log(multiplyByTwo(myObject));
+// output = Mustafas World
+
+// const firstName = (name, lastName) => {
+//   console.log(`${name} ${lastName}'s World`);
+// };
+
+// firstName("Mustafa", "Ahmed")
+// firstName("Victor", "Sauceda")
+
+// const number = (anyNumber, anotherNumber) => {
+// return anyNumber *4
+// }
+
+// number(2, 7)
+// console.log(number(4, 7));
+
+// const adder = (firstNumber, secondNumber) => {
+//   return firstNumber + secondNumber
+// }
+// console.log(adder(7,3));
+
+const randomArray = ["one", "three", "ten", "two", "seven"];
+for (let index = 0; index < randomArray.length; index++) {
+  const element = randomArray[index];
+  if (index % 2 !== 0) {
+    console.log(element);
+  }
+}
